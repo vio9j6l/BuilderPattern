@@ -13,13 +13,19 @@ public class Main {
     public static void main(String[] args) {
         Address address = new Address("1600 Woodland Ave.", "Abington", "PA", "19001");
 
+        Person person03 = new Person.Builder()
+            .firstName("Alfred")
+            .lastName("Neuman")
+            .build()
+            ;
+        /*
         Person person01 = new Person("Alfred");
         Person person02 = new Person("Alfred", "Neuman");
         Person person03 = new Person("Alfred", "Edward", "Neuman");
         Person person04 = new Person("Alfred", "Edward", "Neuman", LocalDate.parse("1894-12-02"));
         Person person05 = new Person("Alfred", "Edward", "Neuman", LocalDate.parse("1894-12-02"), address);
         Person person06 = new Person("Alfred", "Edward", "Neuman", LocalDate.parse("1894-12-02"), address, "215-867-9713");
-
+         */
         /*
          * What if you wanted to provide a constructor for just:
          *   first name
@@ -34,5 +40,7 @@ public class Main {
          *
          * Because both signatures are String, String, String
          */
+
+
     }
 }
