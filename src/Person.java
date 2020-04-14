@@ -30,6 +30,7 @@ public class Person
     this.phoneNumber = builder.buildPhoneNumber;
   }
 
+  //These are just fields that correspond to any Person fields that we were setting in the constructor.  They're not necessarily every field in Person
   public static class Builder {
     String    buildFirstName;
     String    buildLastName;
@@ -56,12 +57,12 @@ public class Person
       return this;
     }
 
-    public Builder birthday(String buildBirthday) {
+    public Builder birthday(LocalDate buildBirthday) {
       this.buildBirthday = buildBirthday;
       return this;
     }
 
-    public Builder address(String buildAddress) {
+    public Builder address(Address buildAddress) {
       this.buildAddress = buildAddress;
       return this;
     }
@@ -69,6 +70,10 @@ public class Person
     public Builder phoneNumber(String buildPhoneNumber) {
       this.buildPhoneNumber = buildPhoneNumber;
       return this;
+    }
+
+    public Person build() {
+      return new Person((this));
     }
 
   }

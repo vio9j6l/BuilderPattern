@@ -11,11 +11,19 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) {
-        Address address = new Address("1600 Woodland Ave.", "Abington", "PA", "19001");
+        //Address address = new Address("1600 Woodland Ave.", "Abington", "PA", "19001");
 
         Person person03 = new Person.Builder()
             .firstName("Alfred")
             .lastName("Neuman")
+            .build()
+            ;
+
+        Address address01 = new Address.Builder()
+            .street("1600 Woodland Ave.")
+            .city("Abington")
+            .state("PA")
+            .zip("19001")
             .build()
             ;
         /*
